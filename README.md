@@ -40,7 +40,7 @@ pip install tensorflow==2.18.0 opencv-python mediapipe scikit-learn matplotlib
 ## Step 2: Keypoints using MP Holistic
 Utilize the MediaPipe framework to extract keypoints using the Holistic model. This involves initializing MediaPipe components and defining functions to process the video input and draw landmarks. This step is crucial for capturing the dynamic movements involved in sign language.
 Below is an example picture:
-![Alt text](image/record_keypoint.png "Hello")
+![Alt text](record_keypoint.png "Hello")
 
 ## Step 3: Extract Keypoint Values
 Extract keypoints from poses, faces, and hands. These keypoints are critical as they represent the coordinates necessary for the LSTM model to learn the sign language gestures. The keypoints are saved as numpy arrays for further processing.
@@ -52,11 +52,11 @@ Organize your dataset by creating directories for each action your model needs t
 Use your webcam to capture video sequences. As you perform or display sign language gestures in front of the camera, the system extracts and stores keypoints from each video frame. These keypoints serve as the training and testing data for your LSTM model.
 For each lab, it will collect 30 frames which will shown at the top-left corner of the window written as "Collecting frames from {label} Video Number: {number}". Here the labels are "Thanks", "hello" and "i love you". For this we had clicked 15 frames with right hand and the next 15 frames with left hand.
 Below are the sample pictures taken:
-![Alt text](image/data_hello.png "Hello")
+![Alt text](data_hello.png "Hello")
 
-![Alt text](image/data_thanks.png "Thanks")
+![Alt text](data_thanks.png "Thanks")
 
-![Alt text](image/data_iloveyou.png "I Love you")
+![Alt text](data_iloveyou.png "I Love you")
 
 ## Step 6: Preprocess Data and Create Labels and Features
 Prepare your data for the LSTM network by creating labels and organizing sequence data. This preprocessing step converts raw keypoints into a structured format that the neural network can understand and learn from.
@@ -73,8 +73,8 @@ Evaluate the model's performance using metrics such as the confusion matrix and 
 ## Step 10: Real-Time Testing
 Finally, test the system in real-time with live video input from your webcam. This step is essential to see how the model performs in practical scenarios and provides insights into real-world application feasibility.
 Below are the example pictures taken during the real time prediction:
-![Alt text](image/real_hello.png "Hello")
+![Alt text](real_hello.png "Hello")
 
-![Alt text](image/real_thanks.png "Thanks")
+![Alt text](real_thanks.png "Thanks")
 
-![Alt text](image/real_iloveyou.png "I Love you")
+![Alt text](real_iloveyou.png "I Love you")
