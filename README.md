@@ -1,14 +1,18 @@
 # Sign Language Detection using LSTM and MediaPipe
 
 ## Acknowledgment
+
 This project was developed by Ritwika Das (GWID: G30941802) and Aditi Vyas (GWID: G40802010) under the supervision of Professor Robert Pless for the course *Introduction to Computer Vision (CSCI 6527_10)* at George Washington University.
 
 ## Main Aim
-Our aim is to transform the way we communicate with the deaf and hard of hearing community by developing a cutting-edge sign language detection system. By integrating Long Short-Term Memory (LSTM) networks with MediaPipe technology, our project is designed to precisely recognize and interpret sign language from live video inputs.
+
+Our aim is to transform the way we communicate with the deaf and hard of hearing community by developing a cutting-edge sign language detection system. By integrating Long Short-Term Memory (LSTM) networks with MediaPipe technology, our project is designed to precisely recognize and interpret sign language from live video inputs. To refine our approach and ensure effectiveness, we drew inspiration from external resources, including educational videos, for designing the LSTM architecture, enriching our understanding and application of this advanced technology.
 
 # Process Overview
 
-In our project, we started by setting up all the necessary tools like TensorFlow, Keras, and MediaPipe. These helped us build and manage our models effectively. We then used MediaPipe Holistic to pick up key points from video frames, which are crucial for understanding the specific movements in sign language. With these keypoints, we built a network using deep learning techniques, specifically LSTM layers, because they’re great for predicting sequences, which is exactly what we need for recognizing sign language from videos. Finally, we brought our project to life by making it work in real-time. This meant our system could take live video, spot the important gestures, and use our model to interpret these gestures right as they happen.
+In our project, we started by setting up essential tools like TensorFlow, Keras, and MediaPipe. These tools helped us build and manage our models effectively. We used MediaPipe Holistic to capture important points from video frames, crucial for recognizing sign language movements. With these keypoints, we built a network with LSTM layers, which are great for predicting sequences—exactly what we need to interpret sign language from videos. We made our system work in real time, allowing it to process live video, detect important gestures, and interpret them on the spot.
+
+Our sign language detection system recognizes gestures quickly and operates in real time. It processes gestures in milliseconds, ensuring smooth communication. We built and tested the system on a standard computer with a GPU, using TensorFlow to handle the computations efficiently.
 
 ## Learning Outcomes
 
@@ -32,6 +36,7 @@ pip install tensorflow==2.18.0 opencv-python mediapipe scikit-learn matplotlib
 ```
 
 ## Step 2: Keypoints using MP Holistic
+
 In our project, we took advantage of the MediaPipe framework, specifically using its Holistic model to extract keypoints from video inputs. First, we set up MediaPipe’s components to prepare for processing. This setup involved initializing the system to analyze frames for human gestures and poses essential for sign language interpretation.
 
 Next, we wrote functions to manage the video input and execute the detection tasks. These functions allowed us to process the video data efficiently, enabling the Holistic model to identify and extract important spatial landmarks or keypoints from each frame. These keypoints are critical as they mark precise locations of body parts such as the face, hands, and posture, which are all vital for capturing the dynamic movements of sign language.
@@ -43,15 +48,19 @@ Here’s an example picture showing how keypoints are mapped on a person perform
 ![Alt text](record_keypoint.png "Hello")
 
 ## Step 3: Extract Keypoint Values
-We extracted keypoints from poses, faces, and hands. These keypoints were critical as they represented the coordinates necessary for the LSTM model to learn the sign language gestures. The keypoints were saved as numpy arrays for further processing.
+
+In this crucial step, we focused on extracting keypoints from the poses, faces, and hands captured in the video frames, as mentioned. These keypoints are essentially the coordinates that pinpoint critical positions and movements of the signer. They are vital for our LSTM model because they serve as the data input that teaches the model how to interpret different sign language gestures accurately. We saved these keypoints as numpy arrays, which allowed us to efficiently manage and process this data for the subsequent stages of our project.
 
 ## Step 4: Setup Folders for Collection
 We organized our dataset by creating directories for each action our model needed to recognize. This structured approach helped us manage and access video data efficiently during training and testing.
 
 ## Step 5: Collect Keypoint Values for Training and Testing
-Using our webcam, we captured video sequences. As we performed or displayed sign language gestures in front of the camera, the system extracted and stored keypoints from each video frame. These keypoints served as the training and testing data for our LSTM model. 
 
-For each label, it collected 30 frames which were shown at the top-left corner of the window written as "Collecting frames from {label} Video Number: {number}". The labels were "Thanks", "Hello", and "I love you". For this, we clicked 15 frames with the right hand and the next 15 frames with the left hand. Below are the sample pictures taken:
+We used our webcam to capture video sequences that showcased various sign language gestures. As we performed each gesture in front of the camera, our system was hard at work extracting keypoints from every video frame. 
+
+To ensure our model learned effectively, we organized the data collection into specific labels. For each sign gesture—like "Thanks," "Hello," and "I love you"—the system captured 30 frames. The process was clearly monitored, as each frame collection was displayed in the top-left corner of our interface, indicating "Collecting frames from {label} Video Number: {number}". To add diversity to our data, I alternated between using my right and left hands, capturing 15 frames with one hand followed by 15 frames with the other.
+
+Below are some sample pictures that illustrate the frames we collected:
 
 ![Alt text](data_hello.png "Hello")
 
@@ -60,22 +69,33 @@ For each label, it collected 30 frames which were shown at the top-left corner o
 ![Alt text](data_iloveyou.png "I Love you")
 
 ## Step 6: Preprocess Data and Create Labels and Features
-We prepared our data for the LSTM network by creating labels and organizing sequence data. This preprocessing step converted raw keypoints into a structured format that the neural network could understand and learn from.
+
+In this step, we took the keypoints we had captured and got them ready for the LSTM network. We labeled each set of movements with the correct sign language gesture and organized them into a clear sequence. This way, we turned the raw keypoints into a structured format that our neural network could easily understand and learn from.
 
 ## Step 7: Build and Train LSTM Neural Network
-We constructed the LSTM model using TensorFlow and trained it with the collected data. This step involved defining the architecture of the LSTM network and tuning parameters to optimize performance.
+
+We developed our LSTM model using TensorFlow, focusing on setting up a straightforward network that could handle sign language gestures. We designed the model's structure simply and then trained it with the data we had collected. During training, we adjusted a few settings to make sure the model learned effectively and could accurately recognize different gestures.
 
 ## Step 8: Make Predictions
-We used the trained model to make predictions on new video data to test the effectiveness of our sign language detection system. This allowed us to validate the model's accuracy and make necessary adjustments.
+
+After training our LSTM model, we put it to the test by running it on new video data. This was our chance to see how effectively it could recognize different sign language gestures in real-world scenarios. Testing allowed us to measure the model's accuracy and see where it excelled and where it might need improvement. By observing how the model performed, we were able to identify specific areas that required adjustments. This step was crucial for refining the system, ensuring that it not only worked accurately but also reliably under various conditions.
 
 ## Step 9: Evaluation
-We evaluated the model's performance using metrics such as the confusion matrix and accuracy rate. This evaluation helped us identify strengths and weaknesses in the model's ability to recognize different sign language gestures.
+
+To understand how well our LSTM model was performing, we used key metrics like the confusion matrix and accuracy rate. These tools gave us a clear picture of the model's effectiveness at recognizing sign language gestures. By analyzing these metrics, we were able to pinpoint where the model was succeeding and where it was falling short.
 
 ## Step 10: Real-Time Testing
-Finally, we tested the system in real-time with live video input from our webcam. This step was essential to see how the model performed in practical scenarios and provided insights into real-world application feasibility. Below are the example pictures taken during the real-time prediction:
+
+Finally, we brought our sign language detection system to life by testing it in real time. We used live video input from our webcam to see how the model would perform under real-world conditions. This real-time testing was vital as it showed us whether the system could effectively recognize sign language gestures as they happen, mirroring everyday interactions. This step not only tested the practicality of our system but also gave us valuable insights into its feasibility for real-world applications. Below are some example pictures we captured during these real-time predictions:
 
 ![Alt text](real_hello.png "Hello")
 
 ![Alt text](real_thanks.png "Thanks")
 
 ![Alt text](real_iloveyou.png "I Love you")
+
+# Challenges and Failures
+
+Throughout the development of our sign language detection system, we encountered several challenges and failures that provided crucial learning opportunities. One significant challenge was achieving consistent accuracy across different lighting conditions and backgrounds, which sometimes confused the model. Additionally, the model sometimes struggled to distinguish between signs that had similar motions or were visually alike, leading to confusion. These issues prompted us to refine our algorithms and consider enhancements like advanced preprocessing techniques and more robust data augmentation. Addressing these challenges not only improved our model’s performance but also deepened our understanding of practical application constraints in real-world environments.
+
+![Alt text](#.png "Hello")
