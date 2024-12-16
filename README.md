@@ -110,4 +110,4 @@ Finally, we brought our sign language detection system to life by testing it in 
 
 Throughout the development of our sign language detection system, we encountered several challenges and failures that provided crucial learning opportunities. One significant challenge was achieving consistent accuracy across different lighting conditions and backgrounds, which sometimes confused the model. Additionally, the model sometimes struggled to distinguish between signs that had similar motions or were visually alike, leading to confusion. These issues prompted us to refine our algorithms and consider enhancements like advanced preprocessing techniques and more robust data augmentation. Addressing these challenges not only improved our model’s performance but also deepened our understanding of practical application constraints in real-world environments.
 
-![Alt text](failure.png "Fail")
+![Alt text](real_fail.png "Fail")
