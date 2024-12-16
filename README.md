@@ -93,9 +93,9 @@ To understand how well our LSTM model was performing, we used key metrics like t
 
 These tools gave us a clear picture of the model's effectiveness at recognizing sign language gestures. By analyzing these metrics, we were able to pinpoint where the model was succeeding and confirm that no shortcomings were observed in the current test set.
 
-![Alt text](matrix.png "Confusion Matrix and accuracy")
-
 ![Alt text](results.png "prediction")
+
+![Alt text](matrix.png "Confusion Matrix and accuracy")
 
 ## Step 10: Real-Time Testing
 
