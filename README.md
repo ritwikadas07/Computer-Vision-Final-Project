@@ -89,7 +89,9 @@ After training our LSTM model, we put it to the test by running it on new video 
 
 ## Step 9: Evaluation
 
-To understand how well our LSTM model was performing, we used key metrics like the confusion matrix and accuracy rate. The confusion matrix revealed that for each gesture, the model achieved 100% precision, meaning it correctly identified gestures without any false positives or false negatives. Additionally, the overall accuracy rate was 100%, showcasing that the model made correct predictions for all test samples.
+To understand how well our LSTM model was performing, we used key metrics like the confusion matrix and accuracy rate. 
+The confusion matrix revealed that for each gesture, the model achieved 100% precision, meaning it correctly identified gestures without any false positives or false negatives. 
+Additionally, the overall accuracy rate was 100%, showcasing that the model made correct predictions for all test samples.
 
 These tools gave us a clear picture of the model's effectiveness at recognizing sign language gestures. By analyzing these metrics, we were able to pinpoint where the model was succeeding and confirm that no shortcomings were observed in the current test set.
 
@@ -115,7 +117,9 @@ Finally, we brought our sign language detection system to life by testing it in 
 
 # Challenges and Failures
 
-Throughout the development of our sign language detection system, we encountered several challenges and failures that provided crucial learning opportunities. One significant challenge was achieving consistent accuracy across different lighting conditions and backgrounds, which sometimes confused the model. Additionally, the model sometimes struggled to distinguish between signs that had similar motions or were visually alike, leading to confusion. These issues prompted us to refine our algorithms and consider enhancements like advanced preprocessing techniques and more robust data augmentation. Addressing these challenges not only improved our model’s performance but also deepened our understanding of practical application constraints in real-world environments.
+Throughout the development of our sign language detection system, we encountered several challenges and failures that provided crucial learning opportunities. One significant challenge was achieving consistent accuracy across different lighting conditions and backgrounds, which sometimes confused the model. 
+
+Additionally, the model sometimes struggled to distinguish between signs that had similar motions or were visually alike, leading to confusion. These issues prompted us to refine our algorithms and consider enhancements like advanced preprocessing techniques and more robust data augmentation. Addressing these challenges not only improved our model’s performance but also deepened our understanding of practical application constraints in real-world environments.
 
 Below is an example, where the model is confused between the signs "yes" and "no".
 
