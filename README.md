@@ -32,7 +32,13 @@ pip install tensorflow==2.18.0 opencv-python mediapipe scikit-learn matplotlib
 ```
 
 ## Step 2: Keypoints using MP Holistic
-We utilized the MediaPipe framework to extract keypoints using the Holistic model. This involved initializing MediaPipe components and defining functions to process the video input and draw landmarks. This step was crucial for capturing the dynamic movements involved in sign language. Below is an example picture:
+In our project, we took advantage of the MediaPipe framework, specifically using its Holistic model to extract keypoints from video inputs. First, we set up MediaPipe’s components to prepare for processing. This setup involved initializing the system to analyze frames for human gestures and poses essential for sign language interpretation.
+
+Next, we wrote functions to manage the video input and execute the detection tasks. These functions allowed us to process the video data efficiently, enabling the Holistic model to identify and extract important spatial landmarks or keypoints from each frame. These keypoints are critical as they mark precise locations of body parts such as the face, hands, and posture, which are all vital for capturing the dynamic movements of sign language.
+
+By understanding these movements, our system could accurately recognize and interpret various signs. The ability to track and visualize these human gestures in real-time was key to developing our sign language detection tool, ensuring it works effectively in real-world situations.
+
+Here’s an example picture showing how keypoints are mapped on a person performing sign language:
 
 ![Alt text](record_keypoint.png "Hello")
 
