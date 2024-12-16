@@ -11,10 +11,14 @@ Our aim is to transform the way we communicate with the deaf and hard of hearing
 In our project, we started by setting up all the necessary tools like TensorFlow, Keras, and MediaPipe. These helped us build and manage our models effectively. We then used MediaPipe Holistic to pick up key points from video frames, which are crucial for understanding the specific movements in sign language. With these keypoints, we built a network using deep learning techniques, specifically LSTM layers, because they’re great for predicting sequences, which is exactly what we need for recognizing sign language from videos. Finally, we brought our project to life by making it work in real-time. This meant our system could take live video, spot the important gestures, and use our model to interpret these gestures right as they happen.
 
 ## Learning Outcomes
-Participants will gain hands-on experience in:
-- Extracting keypoints for sign language recognition using MediaPipe Holistic.
-- Constructing and training a deep learning model with LSTM layers suitable for action detection.
-- Applying the model to predict sign language in real-time from video sequences.
+
+Through this project, we gained practical skills in several advanced areas of technology:
+
+- Keypoint Extraction: We learned how to use MediaPipe Holistic to extract keypoints, essential for recognizing the nuanced gestures of sign language.
+- Model Development: We developed expertise in building and training deep learning models, with a focus on LSTM layers ideal for action detection in video sequences.
+- Real-Time Application: We applied our model to real-world scenarios, enabling real-time sign language prediction directly from video inputs.
+
+These efforts have not only boosted our skills but also pushed us forward in using computer vision to improve how we communicate.
 
 # Running the Code
 
