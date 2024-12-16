@@ -120,3 +120,18 @@ Throughout the development of our sign language detection system, we encountered
 Below is an example, where the model is confused between the signs "yes" and "no".
 
 ![Alt text](real_fail.png "Fail")
+
+# Conclusion
+
+The LSTM-based gesture recognition model demonstrated exceptional performance, achieving 100% accuracy on the test set. This highlights its ability to reliably classify sign language gestures based on hand landmarks. The evaluation metrics, including the confusion matrix, confirmed the model's robustness and reliability for recognizing gestures in a controlled dataset.
+
+# Future Work
+
+To enhance the system further:
+
+1. Real-World Deployment: Train and test the model on more diverse datasets with varying hand shapes, sizes, and lighting conditions to improve its generalization.
+2. Dynamic Gesture Support: Extend the model to recognize dynamic sequences of gestures to capture more complex sign language.
+3. Text-to-Speech Conversion: Integrate a module to convert recognized gestures into spoken language, enabling seamless communication for individuals with hearing or speech impairments.
+4. Mobile/Edge Deployment: Optimize the model for real-time inference on mobile or edge devices to make it more accessible and portable.
+
+This future direction aims to create a more inclusive and practical system for gesture recognition and communication.
