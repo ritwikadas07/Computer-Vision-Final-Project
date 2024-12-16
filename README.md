@@ -45,7 +45,7 @@ By understanding these movements, our system could accurately recognize and inte
 
 Here’s an example picture showing how keypoints are mapped on a person performing sign language:
 
-![Alt text](record_keypoint.png "Hello")
+![Alt text](keypoint.png "Hello")
 
 ## Step 3: Extract Keypoint Values
 
@@ -58,15 +58,21 @@ We organized our dataset by creating directories for each action our model neede
 
 We used our webcam to capture video sequences that showcased various sign language gestures. As we performed each gesture in front of the camera, our system was hard at work extracting keypoints from every video frame. 
 
-To ensure our model learned effectively, we organized the data collection into specific labels. For each sign gesture—like "Thanks," "Hello," and "I love you"—the system captured 30 frames. The process was clearly monitored, as each frame collection was displayed in the top-left corner of our interface, indicating "Collecting frames from {label} Video Number: {number}". To add diversity to our data, I alternated between using my right and left hands, capturing 15 frames with one hand followed by 15 frames with the other.
+To ensure our model learned effectively, we organized the data collection into specific labels. For each sign gesture—like "Hello," "Goodbye," "Please," "Thank you," "Yes," and "No"—the system captured 30 frames. The process was clearly monitored, as each frame collection was displayed in the top-left corner of our interface, indicating "Collecting frames from {label} Video Number: {number}". To add diversity to our data, I alternated between using my right and left hands, capturing 15 frames with one hand followed by 15 frames with the other.
 
 Below are some sample pictures that illustrate the frames we collected:
 
-![Alt text](data_hello.png "Hello")
+![Alt text](train_hello.png "Hello")
 
-![Alt text](data_thanks.png "Thanks")
+![Alt text](train_goodbye.png "Goodbye")
 
-![Alt text](data_iloveyou.png "I Love you")
+![Alt text](train_please.png "Please")
+
+![Alt text](train_thankyou.png "Thank you")
+
+![Alt text](train_yes.png "Yes")
+
+![Alt text](train_no.png "No")
 
 ## Step 6: Preprocess Data and Create Labels and Features
 
@@ -90,12 +96,18 @@ Finally, we brought our sign language detection system to life by testing it in 
 
 ![Alt text](real_hello.png "Hello")
 
-![Alt text](real_thanks.png "Thanks")
+![Alt text](real_goodbye.png "Goodbye")
 
-![Alt text](real_iloveyou.png "I Love you")
+![Alt text](real_please.png "Please")
+
+![Alt text](real_thankyou.png "Thank you")
+
+![Alt text](real_yes.png "Yes")
+
+![Alt text](real_no.png "No")
 
 # Challenges and Failures
 
 Throughout the development of our sign language detection system, we encountered several challenges and failures that provided crucial learning opportunities. One significant challenge was achieving consistent accuracy across different lighting conditions and backgrounds, which sometimes confused the model. Additionally, the model sometimes struggled to distinguish between signs that had similar motions or were visually alike, leading to confusion. These issues prompted us to refine our algorithms and consider enhancements like advanced preprocessing techniques and more robust data augmentation. Addressing these challenges not only improved our model’s performance but also deepened our understanding of practical application constraints in real-world environments.
 
-![Alt text](#.png "Hello")
+![Alt text](failure.png "Fail")
