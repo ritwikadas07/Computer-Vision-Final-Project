@@ -121,10 +121,6 @@ Below is an example, where the model is confused between the signs "yes" and "no
 
 ![Alt text](real_fail.png "Fail")
 
-# Conclusion
-
-The LSTM-based gesture recognition model demonstrated exceptional performance, achieving 100% accuracy on the test set. This highlights its ability to reliably classify sign language gestures based on hand landmarks. The evaluation metrics, including the confusion matrix, confirmed the model's robustness and reliability for recognizing gestures in a controlled dataset.
-
 # Future Work
 
 To enhance the system further:
@@ -135,3 +131,7 @@ To enhance the system further:
 4. Mobile/Edge Deployment: Optimize the model for real-time inference on mobile or edge devices to make it more accessible and portable.
 
 This future direction aims to create a more inclusive and practical system for gesture recognition and communication.
+
+# Conclusion
+
+The LSTM-based gesture recognition model demonstrated exceptional performance, achieving 100% accuracy on the test set. This highlights its ability to reliably classify sign language gestures based on hand landmarks. The evaluation metrics, including the confusion matrix, confirmed the model's robustness and reliability for recognizing gestures in a controlled dataset.
