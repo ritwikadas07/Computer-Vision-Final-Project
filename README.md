@@ -4,7 +4,7 @@
 This project was developed by Ritwika Das (GWID: G30941802) and Aditi Vyas (GWID: G40802010) under the supervision of Professor Robert Pless for the course *Introduction to Computer Vision (CSCI 6527_10)* at George Washington University.
 
 ## Main Aim
-The primary goal of this project is to create a sign language detection system that employs Long Short-Term Memory (LSTM) networks and MediaPipe technology. This system is designed to accurately recognize sign language from video inputs, providing an effective communication tool for the deaf and hard of hearing community.
+Our aim is to transform the way we communicate with the deaf and hard of hearing community by developing a cutting-edge sign language detection system. By integrating Long Short-Term Memory (LSTM) networks with MediaPipe technology, our project is designed to precisely recognize and interpret sign language from live video inputs.
 
 # Process Overview
 
