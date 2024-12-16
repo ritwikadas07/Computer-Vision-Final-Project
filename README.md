@@ -49,16 +49,17 @@ Here’s an example picture showing how keypoints are mapped on a person perform
 
 ## Step 3: Extract Keypoint Values
 
-In this crucial step, we focused on extracting keypoints from the poses, faces, and hands captured in the video frames, as mentioned. These keypoints are essentially the coordinates that pinpoint critical positions and movements of the signer. They are vital for our LSTM model because they serve as the data input that teaches the model how to interpret different sign language gestures accurately. We saved these keypoints as numpy arrays, which allowed us to efficiently manage and process this data for the subsequent stages of our project.
+In this, we focused on extracting keypoints from the poses, faces, and hands captured in the video frames, as mentioned. These keypoints are essentially the coordinates that pinpoint critical positions and movements of the signer. They are vital for our LSTM model because they serve as the data input that teaches the model how to interpret different sign language gestures accurately. We saved these keypoints as numpy arrays, which allowed us to efficiently manage and process this data for the subsequent stages of our project.
 
 ## Step 4: Setup Folders for Collection
+
 We organized our dataset by creating directories for each action our model needed to recognize. This structured approach helped us manage and access video data efficiently during training and testing.
 
 ## Step 5: Collect Keypoint Values for Training and Testing
 
 We used our webcam to capture video sequences that showcased various sign language gestures. As we performed each gesture in front of the camera, our system was hard at work extracting keypoints from every video frame. 
 
-To ensure our model learned effectively, we organized the data collection into specific labels. For each sign gesture—like "Hello," "Goodbye," "Please," "Thank you," "Yes," and "No"—the system captured 30 frames. The process was clearly monitored, as each frame collection was displayed in the top-left corner of our interface, indicating "Collecting frames from {label} Video Number: {number}". To add diversity to our data, I alternated between using my right and left hands, capturing 15 frames with one hand followed by 15 frames with the other.
+To ensure our model learned effectively, we organized the data collection into specific labels. For each sign gesture—like "Hello," "Goodbye," "Please," "Thank you," "Yes," and "No"—the system captured 30 frames. The process was clearly monitored, as each frame collection was displayed in the top-left corner of our interface, indicating "Collecting frames from {label} Video Number: {number}". To add diversity to our data, we alternated between using my right and left hands, capturing 15 frames with one hand followed by 15 frames with the other.
 
 Below are some sample pictures that illustrate the frames we collected:
 
@@ -80,7 +81,7 @@ In this step, we took the keypoints we had captured and got them ready for the L
 
 ## Step 7: Build and Train LSTM Neural Network
 
-We developed our LSTM model using TensorFlow, focusing on setting up a straightforward network that could handle sign language gestures. We designed the model's structure simply and then trained it with the data we had collected. During training, we adjusted a few settings to make sure the model learned effectively and could accurately recognize different gestures.
+We developed our LSTM model using TensorFlow, focusing on setting up a straightforward network that could handle sign language gestures. We designed the model's structure simply and then trained it with the data we had collected. 
 
 ## Step 8: Make Predictions
 
@@ -88,7 +89,13 @@ After training our LSTM model, we put it to the test by running it on new video 
 
 ## Step 9: Evaluation
 
-To understand how well our LSTM model was performing, we used key metrics like the confusion matrix and accuracy rate. These tools gave us a clear picture of the model's effectiveness at recognizing sign language gestures. By analyzing these metrics, we were able to pinpoint where the model was succeeding and where it was falling short.
+To understand how well our LSTM model was performing, we used key metrics like the confusion matrix and accuracy rate. The confusion matrix revealed that for each gesture, the model achieved 100% precision, meaning it correctly identified gestures without any false positives or false negatives. Additionally, the overall accuracy rate was 100%, showcasing that the model made correct predictions for all test samples.
+
+These tools gave us a clear picture of the model's effectiveness at recognizing sign language gestures. By analyzing these metrics, we were able to pinpoint where the model was succeeding and confirm that no shortcomings were observed in the current test set.
+
+![Alt text](matrix.png "Confusion Matrix and accuracy")
+
+![Alt text](results.png "prediction")
 
 ## Step 10: Real-Time Testing
 
