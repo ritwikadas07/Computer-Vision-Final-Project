@@ -8,17 +8,7 @@ Our aim is to transform the way we communicate with the deaf and hard of hearing
 
 # Process Overview
 
-## 1. We Imported and Installed Dependencies
-We ensured that all necessary libraries and frameworks were installed, including TensorFlow, Keras, and MediaPipe, which facilitated the development of our models and the processing of video data.
-
-## 2. We Extracted Keypoints using MediaPipe Holistic
-We utilized MediaPipe Holistic to detect and extract keypoints from video frames. These keypoints were crucial for analyzing human gestures in sign language, allowing us to gather detailed spatial data on sign language movements.
-
-## 3. We Built the Sign Language Detection Models
-We developed deep neural networks using TensorFlow and Keras, incorporating LSTM layers. The LSTM layers were chosen for their optimal performance in sequence prediction, which is essential for handling the sequential data of keypoints derived from sign language gestures.
-
-## 4. We Implemented Real-Time Sign Language Prediction
-We successfully implemented models to predict sign language in real-time using video sequences. This process involved processing live video inputs, extracting keypoints, and using these keypoints in our LSTM networks to accurately classify sign language gestures.
+In our project, we started by setting up all the necessary tools like TensorFlow, Keras, and MediaPipe. These helped us build and manage our models effectively. We then used MediaPipe Holistic to pick up key points from video frames, which are crucial for understanding the specific movements in sign language. With these keypoints, we built a network using deep learning techniques, specifically LSTM layers, because they’re great for predicting sequences, which is exactly what we need for recognizing sign language from videos. Finally, we brought our project to life by making it work in real-time. This meant our system could take live video, spot the important gestures, and use our model to interpret these gestures right as they happen.
 
 ## Learning Outcomes
 Participants will gain hands-on experience in:
