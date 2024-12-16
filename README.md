@@ -138,4 +138,4 @@ This future direction aims to create a more inclusive and practical system for g
 
 # Conclusion
 
-The LSTM-based gesture recognition model demonstrated exceptional performance, achieving 100% accuracy on the test set. This highlights its ability to reliably classify sign language gestures based on hand landmarks. The evaluation metrics, including the confusion matrix, confirmed the model's robustness and reliability for recognizing gestures in a controlled dataset.
+Our LSTM-based gesture recognition model achieved 100% accuracy in our tests, showing it can accurately identify sign language gestures from hand movements. We used various evaluation methods like the confusion matrix to ensure the model is dependable and effective. It consistently recognized every gesture correctly in our controlled tests, which is promising for real-world use. This success suggests that our system could greatly help improve communication for the deaf and hard of hearing community.
